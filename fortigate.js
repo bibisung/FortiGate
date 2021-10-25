@@ -4,7 +4,7 @@ const GET_POLICY_URL = 'https://192.168.1.99/api/v2/cmdb/firewall/policy/'
 const CREATE_USER_URL = 'https://192.168.1.99/api/v2/cmdb/user/local/'
 const GET_CONFIG_URL = 'https://192.168.1.99/api/v2/monitor/system/config/backup/?scope=global'
 const buttonEl = document.querySelector('.btn')
-const CurrentTime = Date.now()
+const currentTime = Date.now()
 
 // FortiGate 모든 User 정보 가져오기
 const GET_USER_RES = fetch(GET_USER_URL, {
