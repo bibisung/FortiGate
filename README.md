@@ -16,3 +16,4 @@ FortiGate(192.168.1.99) -------------  UTP  ------------ Server(192.168.1.100)
 1. CORS
 - https://developer.mozilla.org/ko/docs/Web/HTTP/CORS
 2. WAI-ARIA role 
+3. FortiGate REST API Document는 Public이 아님
