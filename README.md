@@ -3,7 +3,7 @@ Fortinet 제품 중 FortiGate에서 제공되는 REST API를 사용하여 CRUD �
 
 ## 테스트 환경
 FortiGate(192.168.1.99) -------------  UTP  ------------ Server(192.168.1.100)   
-- Server에서 설계되어있는 REST API URL로 Request(fetch() 사용)  
+- Server에서 설계되어있는 FortiGate REST API URL로 Request(fetch() 사용)  
 - Response 데이터를 JSON 형식으로 변환
 - 교차 출처 요청이므로 FortiGate REST API 계정 생성 시 CORS Allow Origin 설정 Enable(하단 이미지 참고)
 ![cors_option](./img/cors_option.png)
