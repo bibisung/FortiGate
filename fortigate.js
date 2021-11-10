@@ -1,8 +1,9 @@
-const API_KEY = 'jyrjmbGdcc5n1y7H5qqH5gzr56dy94'
+const API_KEY = 'njpnxtztjyyxygtnxHm1rgtrkg4GGc'
 const GET_USER_URL = 'https://192.168.1.99/api/v2/cmdb/user/local/'
 const GET_POLICY_URL = 'https://192.168.1.99/api/v2/cmdb/firewall/policy/'
 const CREATE_USER_URL = 'https://192.168.1.99/api/v2/cmdb/user/local/'
 const GET_CONFIG_URL = 'https://192.168.1.99/api/v2/monitor/system/config/backup/?scope=global'
+const GET_SYSTEM_RESOURCE_URL = 'https://192.168.1.99/api/v2/monitor/system/global-resources'
 const buttonEl = document.querySelector('.btn')
 const currentTime = Date.now()
 
@@ -31,25 +32,25 @@ const GET_POLICY_RES = fetch(GET_POLICY_URL, {
 }).then(GET_POLICY_RES => GET_POLICY_RES.json())
 
 // USER CREATE
-const CREATE_USER = fetch(CREATE_USER_URL, {
-  method: 'POST',
-  headers: {
-    'Authorization': `Bearer ${API_KEY}`,
-    'Accept': 'application/json',
-    'Origin': 'https://localhost:1234'
-  },
-  body: JSON.stringify({
-    'name': 'user001',
-    'status': 'enable',
-    'type': 'password',
-    'two-factor': 'disable',
-    'sms-server': 'fortiguard',
-    'auth-concurrent-override': 'disable',
-    'passwd': 'user001'
-  }),
-  mode: 'cors',
-  cache: 'default'
-}).then((response) => response.json())
+// const CREATE_USER = fetch(CREATE_USER_URL, {
+//   method: 'POST',
+//   headers: {
+//     'Authorization': `Bearer ${API_KEY}`,
+//     'Accept': 'application/json',
+//     'Origin': 'https://localhost:1234'
+//   },
+//   body: JSON.stringify({
+//     'name': 'user001',
+//     'status': 'enable',
+//     'type': 'password',
+//     'two-factor': 'disable',
+//     'sms-server': 'fortiguard',
+//     'auth-concurrent-override': 'disable',
+//     'passwd': 'user001'
+//   }),
+//   mode: 'cors',
+//   cache: 'default'
+// }).then((response) => response.json())
 
 //CONFIG DOWNLOAD
 if(buttonEl) {
@@ -74,3 +75,15 @@ if(buttonEl) {
       })
   })
 }
+
+// MONITOR RESOURCE
+const GET_SYSTEM_RESOURCE_RES = fetch(GET_SYSTEM_RESOURCE_URL, {
+  method: 'GET',
+  headers: {
+    'Authorization': `Bearer ${API_KEY}`,
+    'Accept': 'application/json',
+    'Origin': 'https://localhost:1234'
+  },
+  mode: 'cors',
+  cache: 'default'
+}).then(GET_SYSTEM_RESOURCE_RES => console.log(GET_SYSTEM_RESOURCE_RES.json()))
