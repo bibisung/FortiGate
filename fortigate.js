@@ -1,10 +1,11 @@
+const IP_ADDRESS = '192.168.1.99';
 const API_KEY = 'njpnxtztjyyxygtnxHm1rgtrkg4GGc'
-const GET_USER_URL = 'https://192.168.1.99/api/v2/cmdb/user/local/'
-const GET_POLICY_URL = 'https://192.168.1.99/api/v2/cmdb/firewall/policy/'
-const CREATE_USER_URL = 'https://192.168.1.99/api/v2/cmdb/user/local/'
-const GET_CONFIG_URL = 'https://192.168.1.99/api/v2/monitor/system/config/backup/?scope=global'
-const GET_SYSTEM_RESOURCE_URL = 'https://192.168.1.99/api/v2/monitor/system/global-resources'
-const buttonEl = document.querySelector('.btn')
+const GET_USER_URL = `https://${IP_ADDRESS}/api/v2/cmdb/user/local/`
+const GET_POLICY_URL = `https://${IP_ADDRESS}/api/v2/cmdb/firewall/policy/`
+const CREATE_USER_URL = `https://${IP_ADDRESS}/api/v2/cmdb/user/local/`
+const GET_CONFIG_URL = `https://${IP_ADDRESS}/api/v2/monitor/system/config/backup/?scope=global`
+const GET_SYSTEM_RESOURCE_URL = `https://${IP_ADDRESS}/api/v2/monitor/system/global-resources`
+const buttonEl = document.querySelector('')
 const currentTime = Date.now()
 
 // FORTIGATE ALL USER INFORMATION SELECT
